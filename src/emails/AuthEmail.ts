@@ -9,7 +9,7 @@ interface IEmail {
 export class AuthEmail {
     static sendConfirmationEmail = async( user: IEmail ) => {
         const info = await transporter.sendMail({
-            from: 'UpTask <admin@uptask.com>',
+            from: 'UpTask <uptask-admin@resend.dev>',
             to: user.email,
             subject: 'UpTask - Confirma tu cuenta',
             text: 'UpTask - Confirma tu cuenta',
@@ -62,7 +62,7 @@ export class AuthEmail {
                     <body>
                         <table>
                             <tr>
-                                <td style="background-color:#0284C7;">
+                                <td style="background-color:#1F2937;">
                                 <h1 style="font-size: 21px; color: #ffffff; font-weight: bold; display: table-cell; vertical-align: middle; text-align: center;">UpTask</h1>
                         </td>
                         </tr>
@@ -74,7 +74,7 @@ export class AuthEmail {
                             </tr>
                                 <tr>
                                 <td style="padding-bottom: 50px; text-align: center;">
-                                    <a href="${process.env.FRONTEND_URL}/auth/confirm-account" style="font-size: 14px; font-weight: bold; color: #ffffff; background-color: #0099ff; border-radius: 13px;">Comprobar Cuenta</a>
+                                    <a href="${process.env.FRONTEND_URL}/auth/confirm-account" style="font-size: 14px; font-weight: bold; color: #ffffff; background-color: #A21CAF; border-radius: 13px;">Comprobar Cuenta</a>
                                     <p style="font-size: 16px; color: #666666;  margin-top:40px; text-align:center;">Este código expira en <b>10 minutos</b></p>
                                 </td>
                                 </tr>
@@ -93,7 +93,7 @@ export class AuthEmail {
     
     static sendPasswordResetToken = async( user: IEmail ) => {
         const info = await transporter.sendMail({
-            from: 'UpTask <admin@uptask.com>',
+            from: 'UpTask <uptask-admin@resend.dev>',
             to: user.email,
             subject: 'UpTask - Reestablecer contraseña',
             text: 'UpTask - Reestablecer contraseña',
@@ -146,7 +146,7 @@ export class AuthEmail {
                     <body>
                         <table>
                             <tr>
-                                <td style="background-color:#0284C7;">
+                                <td style="background-color:#1F2937;">
                                 <h1 style="font-size: 21px; color: #ffffff; font-weight: bold; display: table-cell; vertical-align: middle; text-align: center;">UpTask</h1>
                         </td>
                         </tr>
@@ -158,7 +158,7 @@ export class AuthEmail {
                             </tr>
                                 <tr>
                                 <td style="padding-bottom: 50px; text-align: center;">
-                                    <a href="${process.env.FRONTEND_URL}/auth/new-password" style="font-size: 14px; font-weight: bold; color: #ffffff; background-color: #0099ff; border-radius: 13px;">Reestablecer Contraseña</a>
+                                    <a href="${process.env.FRONTEND_URL}/auth/new-password" style="font-size: 14px; font-weight: bold; color: #ffffff; background-color: #A21CAF; border-radius: 13px;">Reestablecer Contraseña</a>
                                     <p style="font-size: 16px; color: #666666;  margin-top:40px; text-align:center;">Este código expira en <b>10 minutos</b></p>
                                 </td>
                                 </tr>
